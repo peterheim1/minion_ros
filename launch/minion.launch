@@ -1,0 +1,11 @@
+<launch>
+
+  
+
+  <node name="arduino" pkg="minion_ros" type="arduino.py">
+    <rosparam file="$(find minion_ros)/config/base.yaml" command="load" />
+  </node>
+
+  <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" output="screen"/>
+
+</launch>
